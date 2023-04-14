@@ -84,7 +84,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: ['./js/main.js'],
+        main: ['./index.ts'],
     },
     output: {
         filename: filename('js'),
@@ -95,7 +95,7 @@ module.exports = {
         port: 4200,
         hot: isDevelopment,
     },
-    devtool: isDevelopment ? 'source-map' : undefined,
+    devtool: isDevelopment ? 'inline-source-map' : undefined,
     plugins: plugins(),
     module: {
         rules: [
@@ -114,7 +114,15 @@ module.exports = {
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 type: 'asset/resource',
-            }
+            },
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ]
-    }
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
 }
