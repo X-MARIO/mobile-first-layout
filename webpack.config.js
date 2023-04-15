@@ -108,11 +108,11 @@ module.exports = {
                 use: cssLoaders('sass-loader'),
             },
             {
-                test: /\.(png|jpg|svg|gif)$/,
-                type: 'asset/images',
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
             },
             {
-                test: /\.(ttf|woff|woff2|eot)$/,
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
             },
             {

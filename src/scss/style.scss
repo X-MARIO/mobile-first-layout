@@ -9,6 +9,10 @@ html {
   box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 body {
   min-width: 320px;
   overflow-x: hidden;
@@ -45,6 +49,8 @@ body {
     padding: 0; // Тут уже не важно, так как уже контейнер меньше и центрируется
   }
 }
+
+/* header */
 
 .header {
   background-color: $accent;
@@ -116,5 +122,28 @@ body {
     &__btn {
       margin-right: 90px;
     }
+  }
+}
+
+/* head */
+
+.head {
+  background-image: url("../images/bg-slider.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 193px;
+}
+
+.top-slider {
+  background: rgba(33, 33, 33, 0.5);
+
+  &__item {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &__title {
+
   }
 }
