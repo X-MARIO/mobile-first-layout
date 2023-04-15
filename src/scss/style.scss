@@ -384,3 +384,19 @@ body {
     text-transform: uppercase;
   }
 }
+
+@media (min-width: 768px) {
+  .call {
+    text-align: left;
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__box {
+      max-width: 427px;
+    }
+  }
+}
