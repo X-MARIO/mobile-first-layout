@@ -39,7 +39,6 @@
     "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
-    "jquery": "^3.6.4",
-    "slick-slider": "^1.8.2"
+    "jquery": "^3.6.4"
   }
 }
