@@ -22,6 +22,7 @@ li {
 
 button {
   padding: 0;
+  cursor: pointer;
 }
 
 p {
@@ -344,6 +345,21 @@ body {
       line-height: 26px;
       max-width: 886px;
     }
+
+    .slick-arrow {
+      width: 70px;
+      height: 70px;
+    }
+
+    .slick-prev {
+      background-color: $accent;
+      top: calc(50% - 70px);
+    }
+
+    .slick-next {
+      background-color: $bg-color;
+      bottom: calc(50% - 70px);
+    }
   }
 }
 
@@ -395,8 +411,31 @@ body {
       align-items: center;
     }
 
+    &__text {
+      margin-bottom: 0;
+    }
+
     &__box {
       max-width: 427px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .call {
+    &__box {
+      max-width: 695px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .call {
+    &__inner {
+      padding: 0 80px;
+    }
+    &__box {
+      max-width: 796px;
     }
   }
 }
