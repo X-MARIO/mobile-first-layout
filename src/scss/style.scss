@@ -24,6 +24,10 @@ button {
   padding: 0;
 }
 
+p {
+  padding: 0;
+}
+
 body {
   min-width: 320px;
   overflow-x: hidden;
@@ -176,6 +180,7 @@ body {
     max-width: 243px;
     margin: 0 auto;
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -187,6 +192,14 @@ body {
       margin: 0 auto;
       background-color: $text-color;
     }
+  }
+
+  &__text {
+    display: none;
+  }
+
+  &__btn {
+    display: none;
   }
 
   .slick-dots {
@@ -220,7 +233,7 @@ body {
 @media (min-width: 640px) {
   .top-slider {
     &__item {
-      min-width: 386px;
+      min-height: 386px;
     }
 
     &__title {
@@ -233,6 +246,7 @@ body {
 
     &__btn {
       display: block;
+      font-weight: 500;
       margin: 0 auto 113px;
       font-size: 18px;
       background-color: $accent;
@@ -263,6 +277,36 @@ body {
     .slick-next {
       background-color: $bg-color;
       bottom: calc(50% - 56px);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .top-slider {
+
+    &__item {
+      min-height: 465px;
+    }
+
+    &__title {
+      padding: 87px 0 0;
+      margin: 0 auto 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__text {
+      display: block;
+      max-width: 567px;
+      margin: 0 auto;
+      padding: 25px 0 32px;
+      font-family: 'RobotoCondensed-Regular', 'Arial', 'sans-serif';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
     }
   }
 }
