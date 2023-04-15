@@ -22,9 +22,39 @@ body {
   background-color: $accent;
 
   &__inner {
-    min-height: 80px;
+    min-height: $base-gutter * 10; // 80px
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.logo {
+  &__link {
+    margin-left: $base-gutter; // 8px
+  }
+}
+
+.menu {
+  &__btn {
+    width: $base-gutter * 5; // 40px
+    height: $base-gutter * 5; // 40px
+    border: none;
+    border-radius: 3px;
+    background-color: #fff;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $accent;
+      top: 15px;
+      left: 14px;
+      box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent;
+    }
   }
 }
