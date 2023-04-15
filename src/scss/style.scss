@@ -18,6 +18,12 @@ body {
   padding: 0 20px;
 }
 
+@media (min-width: 640px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
 .header {
   background-color: $accent;
 
@@ -29,9 +35,25 @@ body {
   }
 }
 
+@media (min-width: 640px) {
+  .header {
+    &__inner {
+      min-height: 100px;
+    }
+  }
+}
+
 .logo {
   &__link {
     margin-left: $base-gutter; // 8px
+  }
+}
+
+@media (min-width: 640px) {
+  .logo {
+    &__link {
+      margin-left: 14px;
+    }
   }
 }
 
