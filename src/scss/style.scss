@@ -22,6 +22,7 @@ li {
 
 button {
   padding: 0;
+  cursor: pointer;
 }
 
 p {
@@ -343,6 +344,98 @@ body {
       font-size: 24px;
       line-height: 26px;
       max-width: 886px;
+    }
+
+    .slick-arrow {
+      width: 70px;
+      height: 70px;
+    }
+
+    .slick-prev {
+      background-color: $accent;
+      top: calc(50% - 70px);
+    }
+
+    .slick-next {
+      background-color: $bg-color;
+      bottom: calc(50% - 70px);
+    }
+  }
+}
+
+/* call */
+.call {
+  background-color: $accent;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+
+  &__title {
+    @extend %roboto-500;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @extend %dosis-300;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    padding: 16px 15px;
+    background-color: $bg-color;
+    @extend %roboto-500;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: $accent;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .call {
+    text-align: left;
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__text {
+      margin-bottom: 0;
+    }
+
+    &__box {
+      max-width: 427px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .call {
+    &__box {
+      max-width: 695px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .call {
+    &__inner {
+      padding: 0 80px;
+    }
+    &__box {
+      max-width: 796px;
     }
   }
 }
