@@ -24,6 +24,28 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+    margin: 0 auto; // центрируется от @media 1024px, но пишу для прозрачности понимания
+    padding: 0; // Тут уже не важно, так как уже контейнер меньше и центрируется
+  }
+}
+
 .header {
   background-color: $accent;
 
@@ -57,6 +79,14 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .logo {
+    &__link {
+      margin-left: 0;
+    }
+  }
+}
+
 .menu {
   &__btn {
     width: $base-gutter * 5; // 40px
@@ -77,6 +107,14 @@ body {
       top: 15px;
       left: 14px;
       box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu {
+    &__btn {
+      margin-right: 90px;
     }
   }
 }
