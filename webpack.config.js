@@ -60,14 +60,14 @@ const plugins = () => {
             }
         }),
         new CleanWebpackPlugin(),
-        // new CopyWebpackPlugin({
-        //     patterns: [
-        //         {
-        //             from: path.resolve(__dirname, 'src/favicon.ico'),
-        //             to: path.resolve(__dirname, 'dist'),
-        //         }
-        //     ]
-        // }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src/images'),
+                    to: path.resolve(__dirname, 'dist/images'),
+                }
+            ]
+        }),
         new MiniCssExtractPlugin({
             filename: filename('css'),
         })
@@ -84,7 +84,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: ['./index.ts'],
+        index: ['./index.ts'],
     },
     output: {
         filename: filename('js'),
@@ -109,7 +109,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
-                type: 'asset/resource',
+                type: 'asset/images',
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
