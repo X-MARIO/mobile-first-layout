@@ -9,9 +9,24 @@ html {
   box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 body {
   min-width: 320px;
   overflow-x: hidden;
+  font-family: 'Roboto-Regular', 'Arial', 'sans-serif';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .container {
@@ -45,6 +60,8 @@ body {
     padding: 0; // Тут уже не важно, так как уже контейнер меньше и центрируется
   }
 }
+
+/* header */
 
 .header {
   background-color: $accent;
@@ -115,6 +132,77 @@ body {
   .menu {
     &__btn {
       margin-right: 90px;
+    }
+  }
+}
+
+/* head */
+
+.head {
+  background-image: url("../images/bg-slider.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 193px;
+}
+
+.top-slider {
+  background: rgba(33, 33, 33, 0.5);
+
+  &__item {
+    color: #ffffff;
+    text-align: center;
+    min-height: 193px;
+  }
+
+  &__title {
+    font-family: 'RobotoCondensed-Regular', 'Arial', 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    text-transform: uppercase;
+    padding: 36px 0 28px;
+    max-width: 243px;
+    margin: 0 auto;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: $base-gutter; // 8px
+      width: 61px;
+      margin: 0 auto;
+      background-color: $text-color;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+
+    .slick-active {
+      button {
+        background-color: transparent;
+        border: 1px solid $text-color;
+      }
+    }
+
+    button {
+      font-size: 0;
+      border: none;
+      background-color: $accent;
+      padding: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 10px;
     }
   }
 }
